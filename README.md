@@ -1,89 +1,69 @@
-# ⚡ Mumbai Electricity Bill Calculator
+# ⚡ Mumbai Electricity Bill Calculator (Android App)
 
-> Calculates real Mumbai residential power bills across Adani, Tata Power, BEST, and MSEDCL using official MERC tariffs. Features automatic BPL subsidy detection (<35 units), tiered slab-based energy rates, per-unit wheeling fees, and fixed monthly charges to provide an accurate, transparent billing breakdown ready for Android integration.
+> A modern, minimalist Android application that calculates real Mumbai residential electricity bills across Adani, Tata Power, BEST, and MSEDCL using official MERC tariffs. Features automatic BPL subsidy detection, tiered slab-based rates, wheeling charges, and transparent bill breakdown.
 
 ---
 
 ## 📌 Overview
 
-The **Mumbai Electricity Bill Calculator** is a Java application designed to accurately calculate monthly residential electricity bills based on real-world tariff orders approved by the **Maharashtra Electricity Regulatory Commission (MERC)**. 
+The **Mumbai Electricity Bill Calculator** is a native Android application built using **Java** and **Material Design Components**. It models real-world residential electricity tariffs approved by the **Maharashtra Electricity Regulatory Commission (MERC)**.
 
-Unlike basic calculators that use arbitrary formulas, this utility models real-life multi-tier progressive slabs, distributor-specific infrastructure charges, and state regulatory rules.
+The app replaces arbitrary billing estimates with actual state regulatory calculations—factoring in multi-tier progressive slabs, distribution provider-specific wheeling fees, and tiered monthly fixed charges.
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-- **🏢 Multi-Provider Support:** Seamlessly handles the 4 major electricity distribution companies (DISCOMs) in the Mumbai Metropolitan Region:
+- **🏢 Multi-Provider Coverage:** Full residential tariff support for all 4 major Mumbai DISCOMs:
   - **Adani Electricity Mumbai Limited (AEML)**
   - **Tata Power (TPC-D)**
   - **BEST Undertaking**
   - **MSEDCL (Mahavitaran)**
-- **🎯 Automatic BPL Subsidy Detection:** Automatically detects consumption under 35 units/month and applies subsidized **Below Poverty Line (BPL)** tariff rates.
-- **📊 Real Slab & Tariff Breakdown:**
-  - **Base Energy Charges:** Progressive tiered rates across consumption slabs (`0–100`, `101–300`, `301–500`, `>500` kWh).
-  - **Wheeling Charges:** Dedicated per-unit distribution network delivery charges.
-  - **Fixed Monthly Charges:** Mandatory recurring service and infrastructure charges.
-- **📱 Android-Ready Architecture:** Designed with modular logic to smoothly transition from a Java CLI prototype into an Android application (`MainActivity.java` + XML Views).
+- **🎯 Automated BPL Subsidy Detection:** Automatically detects consumption under 35 units/month and applies subsidized **Below Poverty Line (BPL)** rates with visual status tags.
+- **📊 Real Bill Breakdown:**
+  - **Base Energy Charges:** Tiered progressive consumption slabs (`0–100`, `101–300`, `301–500`, `>500` kWh).
+  - **Wheeling Charges:** Dedicated per-unit grid transmission fees.
+  - **Fixed Monthly Charges:** Connection and infrastructure maintenance charges based on consumption brackets.
+- **🎨 Sleek & Minimalist UI:**
+  - Modern edge-to-edge layout with no intrusive top ActionBar.
+  - Material card containers with clean elevation and subtle borders.
+  - Instant calculations with animated breakdown display and one-tap reset.
 
 ---
 
 ## 🏛️ Supported Electricity Providers (Residential LT-I)
 
-| Provider | Coverage Area | Slabs Handled | BPL Rates Supported |
+| Provider | Operating Region | Slabs Supported | BPL Subsidy (<35 units) |
 |---|---|---|---|
-| **Adani Electricity** | Mumbai Suburbs | 0-100, 101-300, 301-500, >500 | ✅ Yes (< 35 units) |
-| **Tata Power** | Mumbai City & Suburbs | 0-100, 101-300, 301-500, >500 | ✅ Yes (< 35 units) |
-| **BEST** | Mumbai Island City | 0-100, 101-300, 301-500, >500 | ✅ Yes (< 35 units) |
-| **MSEDCL** | Mulund, Bhandup, Thane, Navi Mumbai | 0-100, 101-300, 301-500, >500 | ✅ Yes (< 35 units) |
+| **Adani Electricity** | Mumbai Suburbs | 0-100, 101-300, 301-500, >500 | ✅ Supported |
+| **Tata Power** | Mumbai City & Suburbs | 0-100, 101-300, 301-500, >500 | ✅ Supported |
+| **BEST** | Mumbai Island City | 0-100, 101-300, 301-500, >500 | ✅ Supported |
+| **MSEDCL** | Mulund, Bhandup, Thane, Navi Mumbai | 0-100, 101-300, 301-500, >500 | ✅ Supported |
 
 ---
 
-## 🚀 How to Run (CLI Prototype)
+## 🚀 How to Build and Run
 
 ### Prerequisites
-- **Java Development Kit (JDK 17 or 21+)** installed and configured on your system.
+- **Android Studio** (Koala / Ladybug or newer)
+- **JDK 17 or 21**
+- Android SDK 35 (minSdk 24)
 
-### Compilation & Execution
-Navigate to the source directory and run:
+### Running on Emulator / Physical Device
+```powershell
+# Build debug APK
+.\gradlew assembleDebug
 
-```bash
-# Navigate to the java source folder
-cd app/src/main/java/com/example/electricitybillcalculator
-
-# Compile the Java file
-javac ElectricityBillCalculator.java
-
-# Run the program
-java ElectricityBillCalculator
+# Install directly to a connected Android device or emulator
+.\gradlew installDebug
 ```
 
 ---
 
-## 💻 Sample Output
+## 🛠️ Tech Stack & Architecture
 
-```text
-Enter electricity units consumed: 36
-Enter electricity provider (Adani / Tata / BEST / MSEDCL): Tata
-Provider   : Tata
-Units      : 36
-BPL Status : false
-Total Bill : ₹246.24
-```
-
----
-
-## 🗺️ Project Roadmap
-
-- [x] **Stage 1 (Complete):** Core calculation logic and console CLI prototype with MERC tariffs.
-- [ ] **Stage 2:** Refactor tariff calculations into an independent `ElectricityCalculator` service class.
-- [ ] **Stage 3:** Build modern Android UI with XML layouts (`EditText`, `Spinner`, `Button`, `TextView`, Cards).
-- [ ] **Stage 4:** Add interactive bill breakdown dialog and generate installable Android `.apk`.
-
----
-
-## 🛠️ Tech Stack
-
-- **Language:** Java (JDK 21)
-- **Target Platforms:** Java Console (CLI) / Android (Java + Android SDK + XML)
-- **Build Tool:** Gradle
+- **Language:** Java
+- **Target Platform:** Android (minSdk 24, targetSdk 35)
+- **UI Framework:** Android XML + Google Material Components (`MaterialCardView`, `TextInputLayout`, `MaterialButton`)
+- **Theme:** Edge-to-edge `Theme.MaterialComponents.DayNight.NoActionBar` with tailored status bar palette
+- **Build System:** Gradle (Kotlin DSL)
