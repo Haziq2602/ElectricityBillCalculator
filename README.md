@@ -24,10 +24,19 @@ The app replaces arbitrary billing estimates with actual state regulatory calcul
   - **Base Energy Charges:** Tiered progressive consumption slabs (`0–100`, `101–300`, `301–500`, `>500` kWh).
   - **Wheeling Charges:** Dedicated per-unit grid transmission fees.
   - **Fixed Monthly Charges:** Connection and infrastructure maintenance charges based on consumption brackets.
-- **🎨 Sleek & Minimalist UI:**
-  - Modern edge-to-edge layout with no intrusive top ActionBar.
-  - Material card containers with clean elevation and subtle borders.
-  - Instant calculations with animated breakdown display and one-tap reset.
+- **📜 Calculation History & Analytics:**
+  - Auto-saves all calculations locally using persistent storage.
+  - Interactive History screen with aggregate stats (total bills, average bill, total kWh).
+  - Quick actions to restore past calculations back into the calculator, share summaries, or delete items.
+- **🎨 Eye-Soothing & Unique Modern UI:**
+  - Soothing Nordic teal & slate palette with high contrast readability and soft surfaces.
+  - Top segmented navigation switcher between **Calculator** and **History**.
+  - One-tap quick preset chips (`30 kWh`, `120 kWh`, `250 kWh`, `450 kWh`).
+  - Sleek Material Outlined Exposed Dropdown for DISCOM selection.
+  - Eye-soothing gradient Hero Result card with effective average rate display (`₹ / kWh`).
+  - Interactive **4-tier visual slab progress indicator** and consumption advice.
+  - Smart eco-saving tips tailored to your monthly consumption bracket.
+  - Native share sheet integration to export formatted bill breakdowns via WhatsApp, SMS, or Email.
 
 ---
 

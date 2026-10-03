@@ -1,13 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme with NoActionBar (removes the purple top bar) -->
+    <!-- Base application theme with NoActionBar -->
     <style name="Theme.ElectricityBillCalculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Sleek Dark Slate Brand Colors instead of Purple -->
-        <item name="colorPrimary">#0F172A</item>
-        <item name="colorPrimaryVariant">#020617</item>
-        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- Soothing Modern Energy Palette -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/primary_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
 
-        <!-- Status bar matching your clean background with dark icons -->
-        <item name="android:statusBarColor">#F8FAFC</item>
+        <!-- Status bar matching clean background with dark icons -->
+        <item name="android:statusBarColor">@color/surface_bg</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/surface_bg</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
     </style>
 </resources>

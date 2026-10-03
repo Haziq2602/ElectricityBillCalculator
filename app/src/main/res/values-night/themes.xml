@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- NoActionBar for Dark Mode -->
     <style name="Theme.ElectricityBillCalculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#38BDF8</item>
-        <item name="colorPrimaryVariant">#0284C7</item>
-        <item name="colorOnPrimary">#000000</item>
+        <item name="colorPrimary">#2DD4BF</item>
+        <item name="colorPrimaryVariant">#0D9488</item>
+        <item name="colorOnPrimary">#0F172A</item>
+        <item name="colorSecondary">#38BDF8</item>
+        <item name="android:statusBarColor">#0F172A</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>
