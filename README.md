@@ -127,6 +127,6 @@ All tariff data, wheeling charges, and slab structures are based on public regul
 
 - **Language:** Java
 - **Target Platform:** Android (minSdk 24, targetSdk 35)
-- **UI Framework:** Android XML + Google Material Components (`MaterialCardView`, `TextInputLayout`, `MaterialButton`)
+- **UI Framework:** Android XML + Google Material Design 3 (`MaterialCardView`, `TextInputLayout`, `MaterialButton`)
 - **Theme:** Edge-to-edge `Theme.MaterialComponents.DayNight.NoActionBar` with tailored status bar palette
 - **Build System:** Gradle (Kotlin DSL)
